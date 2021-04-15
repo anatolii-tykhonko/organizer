@@ -6,7 +6,7 @@ class ToDoList{
 
    bool addTask(Task oneTask){
     if(oneTask == null || tasks.containsValue(oneTask)){
-      print('$oneTask is not saved!');
+      print('Task is not saved!');
       return false;
     }
     tasks[oneTask.id] = oneTask;
@@ -14,8 +14,7 @@ class ToDoList{
     return true;
   }
    bool addAllTask(List<Task> allTask){
-    if(allTask == null){
-      print('Tasks are not saved!');
+    if(allTask ?? ()=> print('Tasks are not saved!')){
       return false;
     }
     for(var i = 0; i < allTask.length; i++){

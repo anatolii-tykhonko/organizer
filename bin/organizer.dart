@@ -6,6 +6,7 @@ import 'ToDoList.dart';
 void main() {
   var organizer = ToDoList();
   var taskCreator = TaskCreator();
+  organizer.addTask(null);
   var task1 = taskCreator.create();
   organizer.addTask(task1);
   var task2 = taskCreator.create();
